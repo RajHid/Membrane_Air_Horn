@@ -128,12 +128,12 @@ FONT="Liberation Sans:style=Regular";
 
 // ================== Köln 28.04.2023
 
-STRINGOFTEXT_BlowCan="Riders unite, together we fight!"; // (32 charackters)
-FONTWIDTHSTRING_BlowCan=[0.00,2.50,0.525,1.85,1.85,0.95,0.75,1.60,1.85,1.85,0.525,0.725,1.85,0.75,0.7250,0.75,1.85,1.85,1.825,0.75,1.85,1.825,0.75,0.95,2.50,0.75,1.825,0.75,0.525,1.85,1.85,0.725];
+STRINGOFTEXT_BlowCan="Lieferando HQ-Besuch 2023"; // (32 charackters)
+FONTWIDTHSTRING_BlowCan=[0.00,1.80,0.5,1.8,0.70,1.8,0.90,1.8,1.80,1.80,1.775,0.725,2.425,2.65,0.925,2.20,1.85,1.55,1.80,1.570,1.85,0.65,1.775,1.800,1.800];
 
 ////Message: 2
-STRINGOFTEXT_Cover="BR-Konferenz 2023";  // (17 charackters)
-FONTWIDTHSTRING_Cover=[0.00,2.50,0.95,1.85,1.625,1.85,1.85,0.75,1.825,1.85,1.85,0.72,1.85,1.825,0.75,1.85,1.85,1.85];
+STRINGOFTEXT_Cover="BR-Leipzig";  // (17 charackters)
+FONTWIDTHSTRING_Cover=[0.00,2.22,2.43,0.93,1.79,1.79,0.5,1.80,1.575,0.5];
 // ================== Köln 28.04.2023 ================== \\
 
 
@@ -220,11 +220,11 @@ if (DesignStatus=="textfitting"){
 if (DesignStatus=="printing"){ //BlowCanHeight+MembraneCoverHeight-ClampLipOverlap
     translate([0,50,BlowCanHeight+MembraneCoverHeight-ClampLipOverlap]){
         rotate([180,0,0]){
-            //Membrane_Cover_Ring();
+            Membrane_Cover_Ring();
         }
     }
     translate([0,0,0]){
-        Blow_Can();
+        //Blow_Can();
     }
 }
 if (DesignStatus=="sizing"){
@@ -370,7 +370,7 @@ module see_me_half(){
                                     //cube([70,70,20],center=true);
                                 }
                                 translate([-30,-30,0]){
-                                    //cube([30,30,150],center=false);
+                                    cube([30,30,150],center=false);
                                     }
                                 }
                             }
@@ -445,7 +445,7 @@ module Blow_Can(){
                                     -WallThickness/1.5,         // HEIGHTDIF    relevant if "yes"
                                     -0.1,                          // OFFDIF       relevant if "yes"
                                     0.2,                        // SCAL_X2      relevant if "yes"
-                                    0.2,                        // SCAL_Y2      relevant if "yes"
+                                    0.2                         // SCAL_Y2      relevant if "yes"
                                     );
 
 //                        translate([0,0,-WallThickness/2.5]){            
